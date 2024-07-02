@@ -6,7 +6,7 @@ class DirectoryError(Exception):
     pass
 
 def run_dcm2niix(dir_in, dir_out):
-    command = "dcm2niix -z -o '{}' '{}'".format(dir_out, dir_in)
+    command = "dcm2niix -z y -o '{}' '{}'".format(dir_out, dir_in)
     subprocess.check_call(command, shell=True)
 
 def delete_unmatched_files(dir_out, keywords):
